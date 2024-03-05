@@ -22,9 +22,18 @@ Tulosta pentujen tiedot.
  ```c#
     Kissa kissa1 = new Kissa();
     Kissa kissa2 = new Kissa();
-    kissa1.LisaaPentu(); // kertaa kolme
-    kissa2.LisaaPentu(); // kertaa kolme
+    Console.WriteLine(kissa1.LisaaPentu());
+    Console.WriteLine(kissa1.LisaaPentu());
+    Console.WriteLine(kissa2.LisaaPentu());
+    Console.WriteLine(kissa1.LisaaPentu());
  ```
+
+Tulostuu:  
+1  
+2  
+1  
+3  
+
 
 ## Vaihe2 
  Jos emo tietää pentunsa voiko pentu tietää emoaan? Lisää LisääPentu -metodiin toiminto, jossa asetat emon. Miten voit viitata niin, että emo on juuri tämä olio, jonka metodia kutsutaan? 
