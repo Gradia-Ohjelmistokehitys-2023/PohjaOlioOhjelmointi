@@ -2,6 +2,9 @@
 {
     public class Player
     {
+        //Perehdy tapahtuman käsittelyyn 
+        public event EventHandler Lost;
+
         private List<Card> _hand;
         private int _handValue = 0;
         private string _name;
@@ -49,7 +52,7 @@
             Busted = false;
         }
 
-        public event EventHandler Lost;
+        
 
     }
 }

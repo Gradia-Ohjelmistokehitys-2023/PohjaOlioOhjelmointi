@@ -35,8 +35,8 @@ namespace Ventti.Presenter
         private void Player_Lost(object sender, EventArgs e)
         {
             Console.WriteLine("---------Event!--------");
-            Player ob = sender as Player;
-            _view.DisplayBustedMessage(ob.Name);          
+            Player lostPlayer = sender as Player;
+            _view.DisplayBustedMessage(lostPlayer.Name);          
         }
 
         private void DealerTurn()

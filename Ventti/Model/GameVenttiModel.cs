@@ -5,11 +5,28 @@
         private Deck _deck = new Deck();
         private Player _player = new Player("You");
         private Player _dealer = new Player("Dealer");
-        public Player Player => _player;
-        public Player Dealer => _dealer;
-        public Deck Deck => _deck;
+        public Player Player
+        {
+            get
+            {
+                return _player;
+            }
+        }
 
-        
+        public Player Dealer {
+            get
+            {
+                return _dealer;
+            }
+        }
+        public Deck Deck
+        {
+            get
+            {
+                return _deck;
+            }
+        }
+
         public Card DealCard(Player inAction)
         {
             Card drawnCard = Deck.DealTopCard();
@@ -26,6 +43,7 @@
             foreach (Card card in inAction.Hand)
             {
                 int value = GetCardValue(card);
+                
                 total += value;
             }
             inAction.HandValue = total;

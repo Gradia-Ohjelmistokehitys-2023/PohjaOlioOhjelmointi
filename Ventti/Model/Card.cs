@@ -5,8 +5,8 @@
     public class Card
     {
         string[] suitSymbols = new string[] { "♠", "♣", "♥", "♦" };
-        public int Value { get; set; }
-        public int Suit { get; set; }
+        public int Value { get; }
+        public int Suit { get;}
 
         public Card(int value, int suit)
         {
