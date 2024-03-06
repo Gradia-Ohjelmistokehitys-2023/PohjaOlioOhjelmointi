@@ -12,20 +12,28 @@
         
         public Card DealCard(Player inAction)
         {
-            Card drawnCard = Deck.DealTopCard();           
+            Card drawnCard = Deck.DealTopCard();
             inAction.GetCard(drawnCard);
-            int total = 0;
-            foreach(Card card in inAction.Hand)
-            {
-                 total+= GetCardValue(card);
-            }
-            inAction.HandValue= total;
+            CountHandValue(inAction);   
+            return drawnCard;
+        }
 
+        private void CountHandValue(Player inAction)
+        {
+            int total = 0;
+            inAction.Hand.Sort((kortti1,kortti2)=>kortti1.Value.CompareTo(kortti2.Value));
+            inAction.Hand.Reverse();
+            foreach (Card card in inAction.Hand)
+            {
+                int value = GetCardValue(card);
+                total += value;
+            }
+            inAction.HandValue = total;
             if (inAction.HandValue > 21)
-            {          
+            {
                 inAction.Busted = true;
             }
-            return drawnCard;
+            
         }
 
         private int GetCardValue(Card card)
