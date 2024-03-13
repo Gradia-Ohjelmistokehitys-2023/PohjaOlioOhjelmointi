@@ -40,9 +40,8 @@ Read first: https://www.w3schools.com/cs/cs_interface.php
      ```csharp
      interface IPublish
      {
-        private List<string> _discoraphy
-        public List<string> Discoraphy{get}
-        void Publish(string name);
+        public List<string> Discoraphy{get;}
+        public void Publish(string name);
      }
      ```
      - Singer class impelment both interfaces.
