@@ -45,14 +45,11 @@ Read first: https://www.w3schools.com/cs/cs_interface.php
      }
      ```
      - Singer class impelment both interfaces.
-     - Publish method adds new record to _discoraphy list.
+     - Publish method adds new record to Discoraphy list.
      - Test that singer object can publish new albums and you can print those to console.
+     - Create new class Writer, which implement only IPublish interface
 
-8. **Review and Reflect:**
-   - Once you've completed the exercise, review your code and reflect on how interfaces helped in achieving polymorphism and code reusability.
 
-10. **Conclusion:**
-    - Summarize your learning from this exercise, noting any challenges faced and insights gained regarding interface-oriented programming in C#.
 
 #### Conclusion:
 This exercise will provide you with practical experience in working with interfaces and understanding their role in achieving polymorphism and code organization. Enjoy coding and experimenting with different performers!
